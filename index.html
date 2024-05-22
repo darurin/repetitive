@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 2.3</title>
+</head>
+<style>
+    #canvas{
+        border: 2px solid black;
+        background-color: beige;
+    }
+    body{
+        background-color: lightcyan;
+    }
+</style>
+<body onload="transform();">
+    <br><br><br><br><br><br><br><br>
+    <center>
+        <canvas id="canvas" width="720" height="640">
+            <script>
+                function transform(){
+                    var canvas = document.getElementById("canvas");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillStyle = 'lightsalmon'
+                    ctx.fillRect(0, 0, 720, 640);
+                    ctx.save();
+                    ctx.rotate(45 * Math.PI / 180);
+                    ctx.fillStyle = 'antiquewhite';
+                    ctx.fillRect(100, -360, 695, 615);
+                    ctx.save();
+                    ctx.rotate(39 * Math.PI / 180);
+                    ctx.fillStyle = 'navy';
+                    ctx.fillRect(25, -600, 660, 590);
+                    ctx.restore();
+                    ctx.rotate(33 * Math.PI / 180);
+                    ctx.fillRect(66, -550, 635, 565);
+                    ctx.restore();
+                    ctx.rotate(27 * Math.PI / 180);
+                    ctx.fillRect(150, -150, 615, 540);
+                    ctx.save();
+                    ctx.rotate(21 * Math.PI / 180);
+                    ctx.fillStyle = 'antiquewhite';
+                    ctx.fillRect(175, -300, 595, 515);
+                    ctx.save();
+                    ctx.rotate(15 * Math.PI / 180);
+                    ctx.fillStyle = 'navy';;
+                    ctx.fillRect(165, -415, 560, 490);
+                    ctx.restore();
+                    ctx.rotate(9 * Math.PI / 180);;
+                    ctx.fillRect(190, -355, 535, 465);
+                    ctx.restore();
+                    ctx.rotate(3 * Math.PI / 180);
+                    ctx.fillRect(225, -115, 515, 440);
+                    ctx.fillStyle = 'antiquewhite';
+                    ctx.rotate(-3 * Math.PI / 180);
+                    ctx.fillRect(225, -90, 495, 415);
+                    ctx.scale(2.0, 0.9);
+                    ctx.fillStyle = 'navy';
+                    ctx.font = 'italic 33px Century Gothic';
+                    ctx.fillText('Repetitive', 120, 330);
+                }
+            </script>
+        </canvas>
+    </center>
+</body>
+</html>
